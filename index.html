@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Lista de presentes do Victor</title>
+</head>
+<body onload="buildProductsTable();" class="container-fluid">
+    <h1>Listinha de presentes</h1>
+    <table class="table table-bordered" id="productsTable" style="font-size: 1em;">
+        <thead>
+            <th>Descrição</th>
+            <th>Link</th>
+            <th>Valor</th>
+            <th>Impostos</th>
+            <th>Total</th>
+            <th>Observações</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        function buildProductsTable() {
+            const products = [
+                {
+                    desc: "Fone de Ouvido Sgor Venus",
+                    link: "https://pt.aliexpress.com/item/1005007090325887.html?aff_fcid=dabdca8a4e2949baab0c8c0457b6c63c-1731076298808-02636-_DdlhKF1&tt=CPS_NORMAL&aff_fsk=_DdlhKF1&aff_platform=shareComponent-detail&sk=_DdlhKF1&aff_trace_key=dabdca8a4e2949baab0c8c0457b6c63c-1731076298808-02636-_DdlhKF1&terminal_id=31848c58bab84b658adca0adcb8c9668&afSmartRedirect=y",
+                    link_desc: "Link Sgor Venus",
+                    price: 58.61,
+                    taxes: 26.20,
+                    obs: "Ví bastante review e achei bem interessante, é uma pegada diferente dos meus e algo 'novo'"
+                },
+                {
+                    desc: "Case 8BitDo para Ultimate 2.4GHz",
+                    link: "https://pt.aliexpress.com/item/1005007316527826.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.2.c7c0nObbnObbxH&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40196.366991.0&scm_id=1007.40196.366991.0&scm-url=1007.40196.366991.0&pvid=d6868205-16c8-41d6-854a-76b685fb5737&_t=gps-id:pcDetailTopMoreOtherSeller,scm-url:1007.40196.366991.0,pvid:d6868205-16c8-41d6-854a-76b685fb5737,tpp_buckets:668%232846%238109%231935&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A",
+                    link_desc: "Link 1",
+                    price: 92.58,
+                    taxes: 41.37,
+                    obs: "Essa loja é relativamente nova e tem apenas 8 vendas desse case"
+                },
+                {
+                    desc: "Case 8BitDo para Ultimate 2.4GHz",
+                    link: "https://pt.aliexpress.com/item/1005006593130734.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.4.7473nImrnImrxX&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40196.366991.0&scm_id=1007.40196.366991.0&scm-url=1007.40196.366991.0&pvid=5232b6df-37ec-4649-9f11-50d5aff34367&_t=gps-id:pcDetailTopMoreOtherSeller,scm-url:1007.40196.366991.0,pvid:5232b6df-37ec-4649-9f11-50d5aff34367,tpp_buckets:668%232846%238111%231996&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A",
+                    link_desc: "Link 2",
+                    price: 92.58,
+                    taxes: 41.37,
+                    obs: "Essa loja é bem antiga e tem mais vendas, mas é mais caro também"
+                },
+                {
+                    desc: "Mouse Attack Shark X11 Preto",
+                    link: "https://pt.aliexpress.com/item/1005007452965481.html?sourceType=620&channel=coin&improveDiscount=Y&BuyNow=true&aff_fcid&aff_fcid=2a9823c866834402af331f82e687c0cb-1730671174001-01631-_Dkwj1fb&tt=CPS_NORMAL&aff_fsk=_Dkwj1fb&afSmartRedirect=y&aff_fcid=c063e303c61c41e8b88c30791482cc97-1730919563043-05699-_DECWP5P&tt=CPS_NORMAL&aff_fsk=_DECWP5P&afSmartRedirect=y&aff_fcid=654312f7cbf048eda38cfd22af9ab214-1730993960687-02202-_Dkb6hlX&tt=CPS_NORMAL&aff_fsk=_Dkb6hlX&afSmartRedirect=y&aff_fcid=72804cb0fa2e4081aff25c25f0308765-1731090301595-07337-_DBSSwDx&tt=CPS_NORMAL&aff_fsk=_DBSSwDx&afSmartRedirect=y&aff_fcid=e8f4165b4f734399a478bce6b3a9d406-1733226389779-07738-_DFhqZwV&tt=CPS_NORMAL&aff_fsk=_DFhqZwV&aff_platform=portals-tool&sk=_DFhqZwV&aff_trace_key=e8f4165b4f734399a478bce6b3a9d406-1733226389779-07738-_DFhqZwV&terminal_id=31848c58bab84b658adca0adcb8c9668&afSmartRedirect=y",
+                    link_desc: "Link X11",
+                    price: 130.54,
+                    taxes: 58.27,
+                    obs: "É o mais barato e simples dos bons, o de entrada"
+                },
+                {
+                    desc: "Mouse Rapoo VT3 Pro",
+                    link: "https://pt.aliexpress.com/item/1005007370236273.html?sourceType=620&channel=coin&improveDiscount=Y&BuyNow=true&aff_fcid&aff_fcid=2a9823c866834402af331f82e687c0cb-1730671174001-01631-_Dkwj1fb&tt=CPS_NORMAL&aff_fsk=_Dkwj1fb&afSmartRedirect=y&aff_fcid=c063e303c61c41e8b88c30791482cc97-1730919563043-05699-_DECWP5P&tt=CPS_NORMAL&aff_fsk=_DECWP5P&afSmartRedirect=y&aff_fcid=654312f7cbf048eda38cfd22af9ab214-1730993960687-02202-_Dkb6hlX&tt=CPS_NORMAL&aff_fsk=_Dkb6hlX&afSmartRedirect=y&aff_fcid=72804cb0fa2e4081aff25c25f0308765-1731090301595-07337-_DBSSwDx&tt=CPS_NORMAL&aff_fsk=_DBSSwDx&afSmartRedirect=y&aff_fcid=b35e7c8bea3d4ee392f0b84b8bdf5131-1733226396324-07782-_DBTSkH3&tt=CPS_NORMAL&aff_fsk=_DBTSkH3&aff_platform=portals-tool&sk=_DBTSkH3&aff_trace_key=b35e7c8bea3d4ee392f0b84b8bdf5131-1733226396324-07782-_DBTSkH3&terminal_id=31848c58bab84b658adca0adcb8c9668&afSmartRedirect=y",
+                    link_desc: "Link Linha Rapoo VT",
+                    price: 216.88,
+                    taxes: 96.76,
+                    obs: "Tem que selecionar o mouse nas opções. Esse é bem bom"
+                },
+                {
+                    desc: "Mouse Rapoo VT3 Pro Max",
+                    link: "https://pt.aliexpress.com/item/1005007370236273.html?sourceType=620&channel=coin&improveDiscount=Y&BuyNow=true&aff_fcid&aff_fcid=2a9823c866834402af331f82e687c0cb-1730671174001-01631-_Dkwj1fb&tt=CPS_NORMAL&aff_fsk=_Dkwj1fb&afSmartRedirect=y&aff_fcid=c063e303c61c41e8b88c30791482cc97-1730919563043-05699-_DECWP5P&tt=CPS_NORMAL&aff_fsk=_DECWP5P&afSmartRedirect=y&aff_fcid=654312f7cbf048eda38cfd22af9ab214-1730993960687-02202-_Dkb6hlX&tt=CPS_NORMAL&aff_fsk=_Dkb6hlX&afSmartRedirect=y&aff_fcid=72804cb0fa2e4081aff25c25f0308765-1731090301595-07337-_DBSSwDx&tt=CPS_NORMAL&aff_fsk=_DBSSwDx&afSmartRedirect=y&aff_fcid=b35e7c8bea3d4ee392f0b84b8bdf5131-1733226396324-07782-_DBTSkH3&tt=CPS_NORMAL&aff_fsk=_DBTSkH3&aff_platform=portals-tool&sk=_DBTSkH3&aff_trace_key=b35e7c8bea3d4ee392f0b84b8bdf5131-1733226396324-07782-_DBTSkH3&terminal_id=31848c58bab84b658adca0adcb8c9668&afSmartRedirect=y",
+                    link_desc: "Link Linha Rapoo VT",
+                    price: 248.74,
+                    taxes: 110.97,
+                    obs: "Tem que selecionar o mouse nas opções. Esse é muito muito bom"
+                },
+            ];
+
+            /*
+            {
+                desc: "",
+                link: "",
+                link_desc: "",
+                price: 0,
+                taxes: 0,
+                obs: ""
+            },
+            */
+
+            const tableRef = document.getElementById('productsTable').getElementsByTagName('tbody')[0];
+            products.forEach(element => {
+                let total = (element.price + element.taxes).toFixed(2);
+                tableRef.insertRow().innerHTML = `
+                    <tr>
+                        <td>${element.desc}</td>
+                        <td><a href="${element.link}" target="_blank" rel="noopener noreferrer">${element.link_desc}</a></td>
+                        <td>R$ ${element.price}</td>
+                        <td>R$ ${element.taxes}</td>
+                        <td>R$ ${total}</td>
+                        <td>${element.obs}</td>
+                    </tr>`;
+            });
+        }
+    </script>
+</body>
+</html>
