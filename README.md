@@ -1,2 +1,1 @@
-# vshenrique.github.io
-Personal Webpage
+# Personal Gift List
